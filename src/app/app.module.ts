@@ -24,6 +24,8 @@ import { EventUserComponent } from './EventUser/event-user/event-user.component'
 import { EventComponent } from './Event/event/event.component';
 import { HomeComponent } from './Home/home/home.component';
 import { OpenDialogboxComponent } from './EventUser/open-dialogbox/open-dialogbox.component';
+import { EventUserAssComponent } from './EventUserAssociation/event-user-ass/event-user-ass.component';
+import { OpenEventuserassDialogboxComponent } from './EventUserAssociation/open-eventuserass-dialogbox/open-eventuserass-dialogbox.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,9 @@ import { OpenDialogboxComponent } from './EventUser/open-dialogbox/open-dialogbo
     EventUserComponent,
     EventComponent,
     HomeComponent,
-    OpenDialogboxComponent
+    OpenDialogboxComponent,
+    EventUserAssComponent,
+    OpenEventuserassDialogboxComponent
   ],
   imports: [
     BrowserModule,

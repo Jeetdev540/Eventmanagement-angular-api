@@ -1,0 +1,26 @@
+<div>
+    <button class="buttonclass" (click)="openDialog()">Create New Event User</button>
+</div>
+
+<div class="container">
+    <div style="margin-top: 10px;">
+        <mat-form-field appearance="standard">
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Search Event User" #input>
+        </mat-form-field>
+    </div>
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" matSort>
+
+            <ng-container class="tdstyle" matColumnDef="firstName">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="tdstyle"> Event Name</th>
+                <td mat-cell *matCellDef="let row"> {{row.eventName}} </td>
+            </ng-container>
+
+            <ng-container class="lastname" matColumnDef="lastname">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="trstyle"> Last Name </th>
+                <td mat-cell *matCellDef="let row"> {{row.lastname}}</td>
+            </ng-container>
+        </table>
+    </div>
+</div>
