@@ -21,8 +21,8 @@ export class ApiService {
 
   //Event user asss url
   indexofuserassurl: string = 'http://localhost:5221/api/EventUserAssociation/Index';
-  addeventassurl:string = 'http://localhost:5221/api/EventUserAssociation/Create';
-
+  addeventassurl: string = 'http://localhost:5221/api/EventUserAssociation/Create';
+  edituserass: string = '';
 
 
 
@@ -69,8 +69,15 @@ export class ApiService {
   GetEventForAss() {
     return this.http.get<any>(this.eventurl);
   }
-  PostEventUserAss(data : any) {
+  PostEventUserAss(data: any) {
     return this.http.post<any>(this.addeventassurl, data);
+  }
+  editEventuserass(data: any, id: number) {
+    return this.http.patch<any>(this.edituserass, data);
+  }
+
+  changuserass(id: number, isActive: boolean) {
+    return this.http.patch<any>(this.userstatus + id + "&isActive=" + isActive, null);
   }
 
 

@@ -58,24 +58,24 @@ export class EventUserAssComponent implements OnInit {
       })
   }
   changeUserstatus(id: number, isActive: boolean) {
-      // this.api.changeuserstatus(id, isActive).subscribe({
-      //   next: (res) => {
-      //     this.getallevent();
-      //   }
-      // });
+      this.api.changeuserstatus(id, isActive).subscribe({
+        next: (res) => {
+          this.getallevent();
+        }
+      });
   }
 
-  editEvent(row: any) {
+  // editEvent(row: any) {
    
-    this.dialog.open(OpenEventuserassDialogboxComponent, {
-      width: '30%',
-      data: row
+  //   this.dialog.open(OpenEventuserassDialogboxComponent, {
+  //     width: '30%',
+  //     data: row
 
-    }).afterClosed().subscribe(val => {
-      if (val === 'update') {
-        this.getallevent();
-      }
+  //   }).afterClosed().subscribe(val => {
+  //     if (val === 'update') {
+  //       this.getallevent();
+  //     }
 
-    })
-  }
+  //   })
+  // }
 }
