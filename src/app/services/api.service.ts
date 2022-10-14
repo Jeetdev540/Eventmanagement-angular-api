@@ -19,6 +19,13 @@ export class ApiService {
   userstatus: string = 'http://localhost:5221/api/EventUser/ChangeActiveStaus?id='
   edituser: string = 'http://localhost:5221/api/EventUser/Edit'
 
+  //Event user asss url
+  indexofuserassurl: string = 'http://localhost:5221/api/EventUserAssociation/Index';
+  addeventassurl:string = 'http://localhost:5221/api/EventUserAssociation/Create';
+
+
+
+
   constructor(private http: HttpClient) { }
 
   postEvent(data: any) {
@@ -54,6 +61,18 @@ export class ApiService {
   editeventuser(data: any, id: number) {
     return this.http.patch<any>(this.edituser, data);
   }
+
+  //event user asss
+  GetEventUserass() {
+    return this.http.get<any>(this.indexofuserassurl);
+  }
+  GetEventForAss() {
+    return this.http.get<any>(this.eventurl);
+  }
+  PostEventUserAss(data : any) {
+    return this.http.post<any>(this.addeventassurl, data);
+  }
+
 
 }
 

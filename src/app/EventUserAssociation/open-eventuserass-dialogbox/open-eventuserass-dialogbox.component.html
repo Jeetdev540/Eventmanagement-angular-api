@@ -1,23 +1,22 @@
-<!-- 
-<form class="example-form" [formGroup]="EventUserForm">
+
+<form class="example-form" [formGroup]="EventUserAssForm">
+  
 
     <input formControlName="id" type="hidden">
   
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>First Name</mat-label>
-      <input formControlName="firstName" matInput placeholder="Enter Your FirstName..">
+    <mat-form-field appearance="fill">
+      <mat-label>Event Name</mat-label>
+      <mat-select formControlName="eventName"  name="event">
+        <mat-option *ngFor="let eventName of EventNames" value="{{eventName.eventName}}">{{eventName.eventName}}</mat-option>
+      </mat-select>
     </mat-form-field>
+    
   
     <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Last Name</mat-label>
-      <input formControlName="lastname" matInput placeholder="Enter Your LastName..">
+      <mat-label>Email</mat-label>
+      <input formControlName="email"  matInput placeholder="Enter Your Email..">
     </mat-form-field>
 
-
-      
-      
-  
-  
      <mat-radio-group formControlName="isActive" aria-label="Select an option" >
         <mat-radio-button [value]="true">Active</mat-radio-button>
         <mat-radio-button [value]="false">Deactive</mat-radio-button>
@@ -28,4 +27,4 @@
       <button mat-flat-button color="warn" mat-dialog-close> Close</button>
       <button mat-flat-button color="primary"  (click)="AddEvent()">{{actiobtn}}</button>
     </div>
-  </form> -->
+  </form>

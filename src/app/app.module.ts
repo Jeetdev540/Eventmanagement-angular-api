@@ -26,6 +26,7 @@ import { HomeComponent } from './Home/home/home.component';
 import { OpenDialogboxComponent } from './EventUser/open-dialogbox/open-dialogbox.component';
 import { EventUserAssComponent } from './EventUserAssociation/event-user-ass/event-user-ass.component';
 import { OpenEventuserassDialogboxComponent } from './EventUserAssociation/open-eventuserass-dialogbox/open-eventuserass-dialogbox.component';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,8 @@ import { OpenEventuserassDialogboxComponent } from './EventUserAssociation/open-
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatSelectModule
 
   ],
   providers: [],
