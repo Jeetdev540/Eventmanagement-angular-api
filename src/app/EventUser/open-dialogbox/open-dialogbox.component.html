@@ -1,0 +1,36 @@
+<form class="example-form" [formGroup]="EventUserForm">
+
+    <input formControlName="id" type="hidden">
+  
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>First Name</mat-label>
+      <input formControlName="firstName" matInput placeholder="Enter Your FirstName..">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Last Name</mat-label>
+      <input formControlName="lastname" matInput placeholder="Enter Your LastName..">
+    </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input  formControlName="email" matInput placeholder="Enter Your Email...">
+      </mat-form-field> 
+      
+      
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>PassWord</mat-label>
+        <input type="password"  formControlName="password"  matInput placeholder="Enter Your Password...">
+      </mat-form-field>
+  
+     <mat-radio-group formControlName="isActive" aria-label="Select an option" >
+        <mat-radio-button [value]="true">Active</mat-radio-button>
+        <mat-radio-button [value]="false">Deactive</mat-radio-button>
+      </mat-radio-group> 
+      
+  
+    <div mat-dialog-actions [align]="'end'">
+      <button mat-flat-button color="warn" mat-dialog-close> Close</button>
+      <button mat-flat-button color="primary"  (click)="AddEvent()">{{actiobtn}}</button>
+    </div>
+  </form>

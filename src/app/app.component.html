@@ -1,0 +1,25 @@
+
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>event_note</mat-icon>
+  </button>
+  <span>Event Management</span>
+  <span class="example-spacer"></span>
+  <button mat-raised-button  class="Eventuser"color="light" routerLink="">Home</button>
+  <button mat-raised-button class="Eventuser" color="light" routerLink="event" >Event</button>
+  <button mat-raised-button class="Eventuser" color="light" routerLink="EventUser">Event Users</button>
+  <!-- <button mat-raised-button  class="Eventuser" color="light" routerLink="event">Event User Association</button> -->
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+
+
+<div class="md-padding" layout="column" layout-fill>
+  <footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+    </div>
+    <!-- Copyright -->
+  </footer>
+</div>

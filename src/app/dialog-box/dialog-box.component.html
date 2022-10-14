@@ -1,0 +1,24 @@
+<form class="example-form" [formGroup]="EventForm">
+  
+  <input formControlName="id" type="hidden">
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Event Name</mat-label>
+    <input formControlName="eventName" matInput placeholder="Event Name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Event Description</mat-label>
+    <textarea formControlName="description" matInput placeholder="Event Description"></textarea>
+  </mat-form-field>
+
+   <mat-radio-group formControlName="isActive" aria-label="Select an option" >
+      <mat-radio-button [value]="true">Active</mat-radio-button>
+      <mat-radio-button [value]="false">Deactive</mat-radio-button>
+    </mat-radio-group> 
+
+  <div mat-dialog-actions [align]="'end'">
+    <button mat-flat-button color="warn" mat-dialog-close> Close</button>
+    <button mat-flat-button color="primary" (click)="AddEvent()">{{actiobtn}}</button>
+  </div>
+</form>
