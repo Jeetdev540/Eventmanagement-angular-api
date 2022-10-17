@@ -86,6 +86,16 @@ export class ApiService {
   GetUserRole() {
     return this.http.get<any>(this.Userrole);
   }
+  GetEventUserRoleAss() {
+    return this.http.get<any>('http://localhost:5221/api/UserRoleAssociation/EventnameDropDown');
+  }
+  GetUserRoleName() {
+    return this.http.get<any>('http://localhost:5221/api/UserRoleAssociation/UserRoleName');
+  }
+  GetEmail(EventName: any) {
+    return this.http.get<any>('http://localhost:5221/api/UserRoleAssociation/AssociatedEmail?EventName=', EventName);
+  }
+
 
 }
 

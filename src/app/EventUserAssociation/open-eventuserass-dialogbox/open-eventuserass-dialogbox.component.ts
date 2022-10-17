@@ -18,8 +18,6 @@ export class OpenEventuserassDialogboxComponent implements OnInit {
     isActive: new FormControl('', [Validators.required])
   })
   actiobtn: string = 'Save';
-  selectedValue: string = '';
-  selectedEvent: string = '';
   constructor(private formbuilder: FormBuilder, private api: ApiService,
     @Inject(MAT_DIALOG_DATA) public editData: any,
     private dialogref: MatDialogRef<OpenEventuserassDialogboxComponent>) { }

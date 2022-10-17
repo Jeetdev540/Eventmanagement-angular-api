@@ -1,1 +1,36 @@
-<p>open-user-role-dialog works!</p>
+<form class="example-form" [formGroup]="EventUserRoleAssForm">
+
+
+    <input formControlName="id" type="hidden">
+
+    <mat-form-field appearance="fill">
+        <mat-label>Event Name</mat-label>
+        <mat-select formControlName="eventName" name="eventName">
+            <mat-option *ngFor="let eventName of EventNames" (onChange)="GetEmail(eventName)" value="{{eventName}}">{{eventName}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <mat-select formControlName="Email" name="email">
+            <mat-option *ngFor="let email of Email" >
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Role Name</mat-label>
+        <mat-select formControlName="RoleName" name="roleName">
+            <mat-option *ngFor="let roleName of RoleName" value="{{roleName}}">{{roleName}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field> 
+
+
+
+    <div mat-dialog-actions [align]="'end'">
+      <button mat-flat-button color="warn" mat-dialog-close> Close</button>
+      <button mat-flat-button color="primary"  (click)="AddEvent()">{{actiobtn}}</button>
+    </div>
+</form>

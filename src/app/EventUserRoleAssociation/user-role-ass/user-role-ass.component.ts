@@ -47,7 +47,6 @@ export class UserRoleAssComponent implements OnInit {
     this.api.GetUserRole()
       .subscribe({
         next: (res) => {
-          console.log(res);
           this.dataSource = new MatTableDataSource(res);
           this.dataSource.paginator = this.paginator;
           this.dataSource.sort = this.sort;
