@@ -24,7 +24,7 @@
             <ng-container matColumnDef="isActive">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header class="tdstyle">  Active Status </th>
                 <td mat-cell *matCellDef="let row" class="trstyle">
-                  <mat-slide-toggle [checked]="row.isActive"  (toggleChange)="changeUserstatus(row.id,!row.isActive)" ></mat-slide-toggle>
+                  <mat-slide-toggle [checked]="row.isActive"  (toggleChange)="changeUserstatus(row.uniqueName,!row.isActive)" ></mat-slide-toggle>
                 </td>
               </ng-container>
         
@@ -36,7 +36,7 @@
                     <mat-icon>edit</mat-icon>
         
                   </button> -->
-                  <button mat-icon-button color="warn" [disabled]="!row.isActive" (click)="changeUserstatus(row.id,!row.isActive)" >
+                  <button mat-icon-button color="warn" [disabled]="!row.isActive" (click)="changeUserstatus(row.uniqueName,!row.isActive)" >
                     <mat-icon>delete</mat-icon>
                   </button>
                 </td>
