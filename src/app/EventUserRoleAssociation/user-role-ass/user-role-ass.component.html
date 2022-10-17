@@ -1,0 +1,44 @@
+<div>
+  <button class="buttonclass" (click)="openDialog()">Create New Event</button>
+</div>
+
+<div class="container">
+  <div style="margin-top: 10px;">
+    <mat-form-field appearance="standard">
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Search Event Name" #input>
+    </mat-form-field>
+  </div>
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+
+      <ng-container matColumnDef="eventName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="trstyle"> Event Name </th>
+        <td mat-cell *matCellDef="let row"> {{row.eventName}} </td>
+      </ng-container>
+
+
+      <ng-container  matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="trstyle"> Email </th>
+        <td mat-cell *matCellDef="let row"> {{row.email}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="roleName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="trstyle"> Role </th>
+        <td mat-cell *matCellDef="let row"> {{row.roleName}}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      <!-- Row shown when there is no matching data. -->
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+      </tr>
+
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 15, 20]" aria-label="Select page of users"></mat-paginator>
+  </div>
+
+</div>

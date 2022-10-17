@@ -23,6 +23,11 @@ export class ApiService {
   addeventassurl: string = 'http://localhost:5221/api/EventUserAssociation/Create';
   changuserstatusass: string = 'http://localhost:5221/api/EventUserAssociation/ChangeActiveStaus?uniqueName=';
 
+  //User role Associstoin url
+  Userrole: string = 'http://localhost:5221/api/UserRoleAssociation/Index';
+
+
+
 
 
   constructor(private http: HttpClient) { }
@@ -71,11 +76,16 @@ export class ApiService {
   PostEventUserAss(data: any) {
     return this.http.post<any>(this.addeventassurl, data);
   }
- 
+
   changuserassstatus(uniqueName: string, isActive: boolean) {
     return this.http.patch<any>(this.changuserstatusass + uniqueName + "&isActive=" + isActive, null);
   }
 
+  //user role
+
+  GetUserRole() {
+    return this.http.get<any>(this.Userrole);
+  }
 
 }
 

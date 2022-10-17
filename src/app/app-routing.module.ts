@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { EventComponent } from './Event/event/event.component';
 import { EventUserComponent } from './EventUser/event-user/event-user.component';
 import { EventUserAssComponent } from './EventUserAssociation/event-user-ass/event-user-ass.component';
+import { UserRoleAssComponent } from './EventUserRoleAssociation/user-role-ass/user-role-ass.component';
 import { HomeComponent } from './Home/home/home.component';
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path:'EventUserAss',
     component: EventUserAssComponent
+  },
+  {
+    path :'EventUserRoleAss',
+    component : UserRoleAssComponent
   }
 ];
 

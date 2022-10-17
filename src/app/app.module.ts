@@ -27,6 +27,8 @@ import { OpenDialogboxComponent } from './EventUser/open-dialogbox/open-dialogbo
 import { EventUserAssComponent } from './EventUserAssociation/event-user-ass/event-user-ass.component';
 import { OpenEventuserassDialogboxComponent } from './EventUserAssociation/open-eventuserass-dialogbox/open-eventuserass-dialogbox.component';
 import {MatSelectModule} from '@angular/material/select';
+import { UserRoleAssComponent } from './EventUserRoleAssociation/user-role-ass/user-role-ass.component';
+import { OpenUserRoleDialogComponent } from './EventUserRoleAssociation/open-user-role-dialog/open-user-role-dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,9 @@ import {MatSelectModule} from '@angular/material/select';
     HomeComponent,
     OpenDialogboxComponent,
     EventUserAssComponent,
-    OpenEventuserassDialogboxComponent
+    OpenEventuserassDialogboxComponent,
+    UserRoleAssComponent,
+    OpenUserRoleDialogComponent
   ],
   imports: [
     BrowserModule,
